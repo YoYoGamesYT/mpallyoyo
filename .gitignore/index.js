@@ -37,7 +37,7 @@ if(a === 0){
 }, 4000)});
 
 bot.on('guildCreate',function(guild){
-  var logschannel = bot.channels.find("id", "657928275376472084")
+  var logschannel = bot.channels.find("id", "658713813725741066")
 
     var embed= new Discord.RichEmbed()
     .setDescription("Bot ajouté sur un serveur !")
