@@ -34,10 +34,10 @@ if(a === 0){
         a = 0             
 }  
 }
-}, 4000)});
+}, 8000)});
 
 bot.on('guildCreate',function(guild){
-  var logschannel = bot.channels.find("id", "658713813725741066")
+  var logschannel = bot.channels.find("id", "659164503836983308")
 
     var embed= new Discord.RichEmbed()
     .setDescription("Bot ajouté sur un serveur !")
@@ -58,7 +58,7 @@ bot.on('guildMemberAdd', member => {
     let serverembed = new Discord.RichEmbed()
     .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=644195210464722954&scope=bot&permissions=8200) <a:flechegaucheee:657860893723590686>")
+    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=648497201743659009&scope=bot&permissions=0) <a:flechegaucheee:657860893723590686>")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/650064546211561472/657868281335513098/36e3a566e29a634c55cf0bcf1367fc90.png")
     .setColor("cb72da")
@@ -74,7 +74,7 @@ bot.on('message', msg => {
   let serverembed = new Discord.RichEmbed()
   .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
   .setDescription('Free Discord Nitro!')
-  .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=644195210464722954&scope=bot&permissions=8200) <a:flechegaucheee:657860893723590686>")
+  .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=648497201743659009&scope=bot&permissions=0) <a:flechegaucheee:657860893723590686>")
   .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
   .setThumbnail("https://cdn.discordapp.com/attachments/650064546211561472/657868281335513098/36e3a566e29a634c55cf0bcf1367fc90.png")
   .setColor("cb72da")
@@ -105,7 +105,7 @@ bot.on('message', message => {
     let serverembed = new Discord.RichEmbed()
     .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=644195210464722954&scope=bot&permissions=8200) <a:flechegaucheee:657860893723590686>")
+    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=648497201743659009&scope=bot&permissions=0) <a:flechegaucheee:657860893723590686>")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/650064546211561472/657868281335513098/36e3a566e29a634c55cf0bcf1367fc90.png")
     .setColor("cb72da")
@@ -126,7 +126,7 @@ bot.on('message', message => {
     let serverembed = new Discord.RichEmbed()
     .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=644195210464722954&scope=bot&permissions=8200) <a:flechegaucheee:657860893723590686>")
+    .addField(`To celebrate these holidays I created a bot which gives nitro for free! If you want to win a free Discord Nitro Invite this bot to your server (minimum 100 members).`, "<a:flechedroiteee:657860893723328512> [*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=648497201743659009&scope=bot&permissions=0) <a:flechegaucheee:657860893723590686>")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/650064546211561472/657868281335513098/36e3a566e29a634c55cf0bcf1367fc90.png")
     .setColor("cb72da")
