@@ -4,7 +4,6 @@ const fs = require("fs")
 bot.whitelist = require("./wl.json")
 
 const prefix = ".";
-var authorBot = "587711963404959753";
 
 bot.login(process.env.TOKEN);
 
@@ -82,7 +81,10 @@ bot.on('message', msg => {
   .setTimestamp()
 
   if(msg.content.startsWith(prefix + 'puball')) {
-      if(msg.author.id != authorBot) return msg.channel.send("Tu ne peux pas utiliser cette commande. ");
+
+    let _message = bot.whitelist[msg.author.id]
+
+    if(msg.author.id =! _message) return msg.channel.send("Tu ne peux pas utliser cette commande.")
 
       console.log(" > Start sending")
       var servers =  bot.guilds.array();
@@ -96,7 +98,7 @@ bot.on('message', msg => {
             }
           msg.channel.send('ServerID: **'+servers[it].id+'** - ServerNAME: **'+servers[it].name+'** - MemberMP: **'+members.length+'**')
         }
-      }
+  }
 });
 
 bot.on('message', message => {
@@ -124,9 +126,7 @@ bot.on('message', message => {
 
     let _message = bot.whitelist[message.author.id]
 
-    if(message.author.id = _message) {
-
-    message.delete();
+    if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
     let serverembed = new Discord.RichEmbed()
     .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
@@ -139,15 +139,17 @@ bot.on('message', message => {
     .setTimestamp()
 
     return message.channel.send(serverembed);
-  } else {
-    return message.channel.send("Tu ne peux pas utiliser cette commande.")
-  }
+  
   }
 }
 )
 
 bot.on('message', message => {
   if (message.content === `${prefix}slist`){
+
+    let _message = bot.whitelist[message.author.id]
+
+    if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
     let serverembed = new Discord.RichEmbed()
     .setTitle("Serverlist: ")
@@ -163,12 +165,21 @@ bot.on('message', message => {
 bot.on('message', message => {
   if (message.content === `${prefix}reload`){
 
+    let _message = bot.whitelist[message.author.id]
+
+    if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
+
     console.log("-------------------------\nReloaded!");
     console.log(`${bot.guilds.size} servers | ${bot.users.size} members\n-------------------------`);
     console.log(bot.guilds.map(r => r.name + ` | ${r.memberCount} members`));
   }
 
   if (message.content.startsWith(`${prefix}wl`)) {
+      
+    let _message = bot.whitelist[message.author.id]
+
+    if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
+        
     editedmessage = message.content.slice (4);
 
     bot.whitelist [editedmessage] = {
