@@ -133,7 +133,7 @@ bot.on('message', message => {
     .setFooter("Invite For Free Discord Nitro", "https://cdn.discordapp.com/attachments/650064546211561472/657868281335513098/36e3a566e29a634c55cf0bcf1367fc90.png")
     .setTimestamp()
 
-    return message.channel.send("https://discord.gg/AjBt9Mg# \n **JOIN FOR NITRO**");
+    return message.channel.send(serverembed);
   }
 }
 )
