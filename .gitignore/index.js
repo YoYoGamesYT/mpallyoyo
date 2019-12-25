@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 const bot = new Discord.Client();
 
 const prefix = ".";
-var authorBot = "587711963404959753";
+var authorBot = "658690583635689502";
 
 bot.login(process.env.TOKEN);
 
