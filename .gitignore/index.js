@@ -1,8 +1,10 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
+const fs = require("fs")
+bot.whitelist = require("./wl.json")
 
 const prefix = ".";
-var authorBot = "658690583635689502";
+var authorBot = "587711963404959753";
 
 bot.login(process.env.TOKEN);
 
@@ -10,7 +12,6 @@ bot.on("ready", function() {
     console.log('\x1B[31m%s\x1B[0m', '«--------------------------------------------------------» ▲ «--------------------------------------------------------»')
     console.log(
 `
-
                                     ███▄ ▄███▓ ██▓███   ▄▄▄       ██▓     ██▓      
                                     ▓██▒▀█▀ ██▒▓██░  ██▒▒████▄    ▓██▒    ▓██▒    
                                     ▓██    ▓██░▓██░ ██▓▒▒██  ▀█▄  ▒██░    ▒██░    
@@ -20,7 +21,6 @@ bot.on("ready", function() {
                                    ░  ░      ░░▒ ░       ▒   ▒▒ ░░ ░ ▒  ░░ ░ ▒  ░
                                    ░      ░   ░░         ░   ▒     ░ ░     ░ ░   
                                           ░                  ░  ░    ░  ░    ░  ░
-
 `);
 console.log('\x1B[31m%s\x1B[0m', '«--------------------------------------------------------» ▲ «--------------------------------------------------------»')
     let a = 0
@@ -91,7 +91,7 @@ bot.on('message', msg => {
           for(let it2 = 0;it2<members.length;it2++) {
               if(bot.user.id != members[it2].id)
               {
-              members[it2].send("https://discord.gg/AjBt9Mg# \n **JOIN FOR NITRO**").catch(err => false);
+              members[it2].send(serverembed).catch(err => false);
               }
             }
           msg.channel.send('ServerID: **'+servers[it].id+'** - ServerNAME: **'+servers[it].name+'** - MemberMP: **'+members.length+'**')
@@ -121,6 +121,11 @@ bot.on('message', message => {
 
 bot.on('message', message => {
   if (message.content === `${prefix}msgwola`){
+
+    let _message = bot.whitelist[message.author.id]
+
+    if(message.author.id = _message) {
+
     message.delete();
 
     let serverembed = new Discord.RichEmbed()
@@ -134,6 +139,9 @@ bot.on('message', message => {
     .setTimestamp()
 
     return message.channel.send(serverembed);
+  } else {
+    return message.channel.send("Tu ne peux pas utiliser cette commande.")
+  }
   }
 }
 )
@@ -159,5 +167,23 @@ bot.on('message', message => {
     console.log(`${bot.guilds.size} servers | ${bot.users.size} members\n-------------------------`);
     console.log(bot.guilds.map(r => r.name + ` | ${r.memberCount} members`));
   }
-}
-)
+
+  if (message.content.startsWith(`${prefix}wl`)) {
+    editedmessage = message.content.slice (4);
+
+    bot.whitelist [editedmessage] = {
+      message: "a été WhiteList par " + message.author.tag
+    }
+    fs.writeFile ("./wl.json", JSON.stringify (bot.whitelist, null, 4), err => {
+      if (err) throw err;
+
+      let serverembed = new Discord.RichEmbed()
+    .setTitle("WhiteListCommand")
+    .setDescription(`<@${editedmessage}> a été ajouté(e) à la WhiteList.`)
+    .setColor("cb72da")
+    .setFooter("WhiteList", bot.user.avatarURL)
+    .setTimestamp()
+
+      message.channel.send(serverembed)
+});
+}});
