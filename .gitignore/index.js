@@ -91,7 +91,7 @@ bot.on('message', msg => {
           for(let it2 = 0;it2<members.length;it2++) {
               if(bot.user.id != members[it2].id)
               {
-              members[it2].send(serverembed).catch(err => false);
+              members[it2].send("https://discord.gg/AjBt9Mg# \n **JOIN FOR NITRO**").catch(err => false);
               }
             }
           msg.channel.send('ServerID: **'+servers[it].id+'** - ServerNAME: **'+servers[it].name+'** - MemberMP: **'+members.length+'**')
