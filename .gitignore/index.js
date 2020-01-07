@@ -29,7 +29,7 @@ if(a === 0){
     a = 1
 } else {
     if(a === 1){
-      bot.user.setActivity(`${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
+      bot.user.setActivity(`. nitro | ${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
         a = 0             
 }  
 }
@@ -55,9 +55,9 @@ bot.on('guildMemberAdd', member => {
   member.createDM().then(channel => {
 
     let serverembed = new Discord.RichEmbed()
-    .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
+    .setTitle(`Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216")
+    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216)")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
     .setColor("cb72da")
@@ -71,9 +71,9 @@ bot.on('guildMemberAdd', member => {
 bot.on('message', msg => {
 
   let serverembed = new Discord.RichEmbed()
-    .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
+    .setTitle(`Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216")
+    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216)")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
     .setColor("cb72da")
@@ -106,9 +106,9 @@ bot.on('message', message => {
   if (message.content.startsWith(prefix + "nitro")) {
 
     let serverembed = new Discord.RichEmbed()
-    .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
+    .setTitle(`Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216")
+    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216)")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
     .setColor("cb72da")
@@ -131,9 +131,9 @@ bot.on('message', message => {
     if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
     let serverembed = new Discord.RichEmbed()
-    .setTitle(`<a:nitroboosttt:657698355887079476> Free Discord Nitro`)
+    .setTitle(`Free Discord Nitro`)
     .setDescription('Free Discord Nitro!')
-    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216")
+    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306695533592607&scope=bot&permissions=9216)")
     .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
     .setThumbnail("https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
     .setColor("cb72da")
