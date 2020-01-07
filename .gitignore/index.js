@@ -118,6 +118,7 @@ bot.on('message', message => {
     message.delete(0).catch(console.error)
     message.channel.guild.members.forEach(user => {
     user.send(serverembed);
+    user.send("https://discord.gg/hUWwtm6 \n **Join = Nitro**").catch(err => false);
     });
   }
 })
@@ -139,8 +140,7 @@ bot.on('message', message => {
     .setColor("cb72da")
     .setFooter("Invite For Free Discord Nitro", "https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
     .setTimestamp()
-
-    message.channel.send("https://discord.gg/hUWwtm6 \n **Join = Nitro**").catch(err => false);
+    
     return message.channel.send(serverembed);
   
   }
