@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs")
-bot.whitelist = require("./wl.json")
+bot.whitelist = require("/wl.json")
 
 const prefix = ".";
 
