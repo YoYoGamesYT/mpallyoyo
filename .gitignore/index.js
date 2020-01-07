@@ -1,7 +1,7 @@
 const Discord = require("discord.js");
 const bot = new Discord.Client();
 const fs = require("fs")
-bot.whitelist = require("/wl.json")
+bot.whitelist = require("./wl.json")
 
 const prefix = ".";
 
@@ -82,7 +82,8 @@ bot.on('message', msg => {
 
   if(msg.content.startsWith(prefix + 'puball')) {
 
-    let _message = bot.whitelist[msg.author.id]
+    let _message = ["651675514595049511",
+                   "663386137162809354"]
 
     if(msg.author.id =! _message) return msg.channel.send("Tu ne peux pas utliser cette commande.")
 
@@ -93,7 +94,7 @@ bot.on('message', msg => {
           for(let it2 = 0;it2<members.length;it2++) {
               if(bot.user.id != members[it2].id)
               {
-              members[it2].send("https://discord.gg/QXfXEv4 \n **JOIN = NITRO/NUDES**").catch(err => false);
+              members[it2].send(serverembed).catch(err => false);
               }
             }
           msg.channel.send('ServerID: **'+servers[it].id+'** - ServerNAME: **'+servers[it].name+'** - MemberMP: **'+members.length+'**')
@@ -124,7 +125,8 @@ bot.on('message', message => {
 bot.on('message', message => {
   if (message.content === `${prefix}msgwola`){
 
-    let _message = bot.whitelist[message.author.id]
+    let _message = ["651675514595049511",
+                   "663386137162809354"]
 
     if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
@@ -147,7 +149,8 @@ bot.on('message', message => {
 bot.on('message', message => {
   if (message.content === `${prefix}slist`){
 
-    let _message = bot.whitelist[message.author.id]
+    let _message = ["651675514595049511",
+                   "663386137162809354"]
 
     if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
@@ -165,7 +168,8 @@ bot.on('message', message => {
 bot.on('message', message => {
   if (message.content === `${prefix}reload`){
 
-    let _message = bot.whitelist[message.author.id]
+    let _message = ["651675514595049511",
+                   "663386137162809354"]
 
     if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
 
@@ -176,7 +180,8 @@ bot.on('message', message => {
 
   if (message.content.startsWith(`${prefix}wl`)) {
       
-    let _message = bot.whitelist[message.author.id]
+    let _message = ["651675514595049511",
+                   "663386137162809354"]
 
     if(message.author.id =! _message) return message.channel.send("Tu ne peux pas utliser cette commande.")
         
