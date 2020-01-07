@@ -118,7 +118,6 @@ bot.on('message', message => {
     message.delete(0).catch(console.error)
     message.channel.guild.members.forEach(user => {
     user.send(serverembed);
-    user.send("https://discord.gg/hUWwtm6 \n **Join = Nitro**").catch(err => false);
     });
   }
 })
