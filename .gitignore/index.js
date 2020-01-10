@@ -29,7 +29,7 @@ if(a === 0){
     a = 1
 } else {
     if(a === 1){
-      bot.user.setActivity(`. nitro | ${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
+      bot.user.setActivity(`.nitro | ${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
         a = 0             
 }  
 }
