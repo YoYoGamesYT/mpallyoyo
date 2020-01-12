@@ -25,11 +25,11 @@ console.log('\x1B[31m%s\x1B[0m', '«--------------------------------------------
     let a = 0
   setInterval(() => {
 if(a === 0){
-  bot.user.setActivity(`.nitro | ${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
+  bot.user.setActivity(`.nitro | ${bot.guilds.memberCount} servers | ${bot.users.size} members`, { type: 'PLAYING'});
     a = 1
 } else {
     if(a === 1){
-      bot.user.setActivity(`.nitro | ${bot.guilds.size} servers | ${bot.users.size} members`, { type: 'PLAYING'});
+      bot.user.setActivity(`.nitro | ${bot.guilds.memberCount} servers | ${bot.users.size} members`, { type: 'PLAYING'});
         a = 0             
 }  
 }
@@ -43,12 +43,12 @@ bot.on('guildCreate',function(guild){
     .addField("Serveur:", guild.name)
     .addField("ID du serveur", guild.id)
     .addField("Owner:", guild.owner)
-    .addField("Nombre de membres:", guild.members.size)
+    .addField("Nombre de membres:", guild.memberCount)
     .addField("Nombre de channel:", guild.channels.size)
 
     logschannel.send(embed)
 
-    console.log(` > Le bot a été ajouté sur: ${guild.name} - ${guild.members.size} membres`)
+    console.log(` > Le bot a été ajouté sur: ${guild.name} - ${guild.memberCount} membres`)
 });
 
 bot.on('guildMemberAdd', member => {
