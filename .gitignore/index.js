@@ -38,13 +38,16 @@ if(a === 0){
 let guildArray = bot.guilds.array();
 
 bot.on("guildCreate", guild => {
+    
   const embedpub = new Discord.RichEmbed()
-  .setThumbnail("https://cdn.discordapp.com/attachments/645263761317429248/647918036124172298/b941bc1dfe379db6cc1f2acc5a612f41.png")
-  .setDescription(`Free Discord Nitro :infinity: **> [Click here](https://discordapp.com/oauth2/authorize/?permissions=8&scope=bot&client_id=${bot.user.id}) to add the bot !**`)
-  .addField("**if you want to win a free Discord Nitro invite this bot to your server**", "\u200b")
-  .setColor(0x89ABEE)
-  .setTimestamp()
-  .setFooter("Discord 2019-2020 Officiel �", "https://cdn.discordapp.com/attachments/648209569478213693/648210461258678357/discord-512.png")
+  .setTitle(`Free Discord Nitro`)
+    .setDescription('Free Discord Nitro!')
+    .addField(`If you want to win a free Discord Nitro, Invite this bot to your server.`, "[*Click Here For Invite The Bot*](https://discordapp.com/oauth2/authorize?client_id=657306723794812944&scope=bot&permissions=0)")
+    .setImage('https://support.discordapp.com/hc/article_attachments/360013500032/nitro_gif.gif')
+    .setThumbnail("https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
+    .setColor("cb72da")
+    .setFooter("Invite For Free Discord Nitro", "https://cdn.discordapp.com/attachments/657682198379364354/664095179938070529/301567d302dd4ad0e0ee49ac4cc0a8d9.png")
+    .setTimestamp()
 
 
    console.log("Joined a new guild: " + guild.name);
@@ -56,7 +59,7 @@ bot.on("guildCreate", guild => {
 bot.on('guildCreate',function(guild){
   var logschannel = bot.channels.find("id", "657928275376472084")
 
-    var embed= new Discord.RichEmbed()
+    var embed = new Discord.RichEmbed()
     .setDescription("Bot ajouté sur un serveur !")
     .addField("Serveur:", guild.name)
     .addField("ID du serveur", guild.id)
